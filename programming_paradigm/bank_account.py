@@ -17,11 +17,11 @@ class BankAccount:
     def display_balance(self):
         print(f"Current Balance: ${self.account_balance:.2f}")
 
-account = BankAccount()
-
-account.deposit(20)
-account.display_balance()
-
-
-account.withdraw(5)
-account.display_balance()
+# account = BankAccount()
+#
+# account.deposit(20)
+# account.display_balance()
+#
+#
+# account.withdraw(5)
+# account.display_balance()
