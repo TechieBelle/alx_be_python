@@ -1,3 +1,6 @@
+from xlwings import books
+
+
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -17,6 +20,9 @@ class Book:
 class Library():
     def __init__(self):
         self.__books = []
+
+    def add_book(self,book):
+        self.__books.append(book)
 
     def list_available_books(self):
         for book in self.__books:
