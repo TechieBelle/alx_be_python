@@ -9,18 +9,19 @@ class BankAccount:
 
     def withdraw(self, amount):
         if amount > self.account_balance:
-            print("Insufficient funds")
+            print("Insufficient funds.")
         else:
             self.account_balance -= amount
+            print(f"Withdrew: ${amount:.1f}")
 
     def display_balance(self):
-        print(f"Current Balance: {self.account_balance}")
+        print(f"Current Balance: ${self.account_balance:.2f}")
 
-# account = BankAccount()
-#
-# account.deposit(20)
-# account.display_balance()
-#
-#
-# account.withdraw(90)
-# account.display_balance()
+account = BankAccount()
+
+account.deposit(20)
+account.display_balance()
+
+
+account.withdraw(5)
+account.display_balance()
