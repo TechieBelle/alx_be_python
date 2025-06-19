@@ -1,6 +1,3 @@
-from xlwings import books
-
-
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -19,18 +16,18 @@ class Book:
 
 class Library():
     def __init__(self):
-        self.__books = []
+        self._books = []
 
     def add_book(self,book):
-        self.__books.append(book)
+        self._books.append(book)
 
     def list_available_books(self):
-        for book in self.__books:
+        for book in self._books:
             if book.is_available():
                 print(f"{book.title} by {book.author}")
 
     def check_out_book(self, title):
-        for book in self.__books:
+        for book in self._books:
             if book.title == title:
                 if book.is_available():
                     book.check_out()
@@ -41,7 +38,7 @@ class Library():
         print(f"Book titled '{title}' not found.")
 
     def return_book(self, title):
-        for book in self.__books:
+        for book in self._books:
             if book.title == title:
                 book.return_book()
                 return
